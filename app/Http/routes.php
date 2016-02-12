@@ -1,5 +1,12 @@
 <?php
 
+Auth::extend('OSAM', function($app)
+{
+    //dd('');
+	return new App\JG\OSAMAuthProvider;
+	
+});
+
 Route::group(['middleware' => 'web'], function() {
     /**
      * Switch between the included languages
@@ -34,4 +41,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'middleware' => 'ad
     require (__DIR__ . '/Routes/Backend/Dashboard.php');
     require (__DIR__ . '/Routes/Backend/Access.php');
     require (__DIR__ . '/Routes/Backend/LogViewer.php');
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });

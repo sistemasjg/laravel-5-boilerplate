@@ -65,10 +65,15 @@ return [
     */
 
     'providers' => [
+		
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Access\User\User::class,
+            'driver' => 'OSAM'
         ],
+		
+        //'users' => [
+        ///    'driver' => 'eloquent',
+       //     'model' => App\Models\Access\User\User::class,
+       // ],
 
         // 'users' => [
         //     'driver' => 'database',
