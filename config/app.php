@@ -173,7 +173,7 @@ return [
          */
         App\Providers\AccessServiceProvider::class,
         App\Providers\AppServiceProvider::class,
-        //App\Providers\AuthServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
@@ -188,8 +188,6 @@ return [
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-		App\Providers\OSAMAuthProvider::class,
-
         /*
          * Has to override the Collective\Html\HtmlServiceProvider form singleton
          */

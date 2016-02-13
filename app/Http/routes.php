@@ -1,12 +1,5 @@
 <?php
 
-Auth::extend('OSAM', function($app)
-{
-    //dd('');
-	return new App\JG\OSAMAuthProvider;
-	
-});
-
 Route::group(['middleware' => 'web'], function() {
     /**
      * Switch between the included languages
